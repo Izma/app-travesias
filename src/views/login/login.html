@@ -1,5 +1,5 @@
 <vs-row vs-justify="center">
-    <vs-col type="flex" vs-justify="center" vs-align="center" vs-lg="3" vs-sm="12" vs-xs="12">
+    <vs-col type="flex" vs-justify="center" vs-align="center" vs-lg="3" vs-sm="10" vs-xs="10">
         <vs-card>
             <div slot="header">
                 <h3>
@@ -9,12 +9,13 @@
             <div>
                 <form>
                     <div class="form-login">
-                        <vs-input icon="account_circle" label-placeholder="Nombre de usuario" />
-                        <vs-input icon="lock" label-placeholder="Contraseña" type="password" />
+                        <vs-input icon="account_circle" label-placeholder="Nombre de usuario" v-model="login.username" />
+                        <vs-input icon="lock" label-placeholder="Contraseña" type="password" v-model="login.password" />
                         <vs-divider />
-                        <vs-button icon="input"></vs-button>
+                        <vs-button color="primary" type="filled" @click="submit">Iniciar sesión</vs-button>
                     </div>
                 </form>
+                {{login}}
             </div>
         </vs-card>
     </vs-col>
